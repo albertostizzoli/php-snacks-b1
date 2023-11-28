@@ -46,14 +46,16 @@ $paragrafi = explode(".", $paragrafo);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>PHP SNACKS</title>
 </head>
+
 <body>
     <h1 class="text-center text-primary">PHP SNACKS</h1>
     <!-- SNACK 1-->
@@ -80,10 +82,19 @@ $paragrafi = explode(".", $paragrafo);
                 <h2 class="text-bg-success p-3">SNACK 2</h2>
                 <main>
                     <form action="index.php" method="GET">
-                        <input type="text" name="name">
-                        <input type="mail" name="mail">
-                        <input type="text" name="age">
-                        <button class="btn btn-success">Invia</button>
+                        <div class="input-group mt-4">
+                            <span class="input-group-text">Nome</span>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                        <div class="input-group mt-4">
+                            <span class="input-group-text">E-mail</span>
+                            <input type="mail" class="form-control" name="mail">
+                        </div>
+                        <div class="input-group mt-4">
+                            <span class="input-group-text">Età</span>
+                            <input type="text" class="form-control" name="age">
+                        </div>
+                        <button class="btn btn-success mt-3">Invia</button>
                     </form>
                     <?php
                     if (isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
@@ -107,14 +118,15 @@ $paragrafi = explode(".", $paragrafo);
             <div class="col-12">
                 <h2 class="text-bg-primary p-3">SNACK BONUS</h2>
                 <main>
-                 <?php
-                 foreach ($paragrafi as $paragrafo) {
-                    echo "<p>" . trim($paragrafo) . "</p>";
-                    ?>
+                    <?php
+                    foreach ($paragrafi as $paragrafo) {
+                        echo "<p>" . trim($paragrafo) . "</p>";
+                        ?>
                     <?php } ?>
                 </main>
             </div>
         </div>
     </div>
 </body>
+
 </html>
