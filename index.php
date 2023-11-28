@@ -59,10 +59,10 @@ $paragrafi = explode(".", $paragrafo);
 <body>
     <h1 class="text-center text-primary">PHP SNACKS</h1>
     <!-- SNACK 1-->
-    <div class="container text-center mt-3">
+    <h2 class="text-bg-danger text-center mt-3 p-3">SNACK 1</h2>
+    <div class="container text-center">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-bg-danger p-3">SNACK 1</h2>
                 <main>
                     <ul>
                         <?php
@@ -76,10 +76,10 @@ $paragrafi = explode(".", $paragrafo);
         </div>
     </div>
     <!-- SNACK 2-->
-    <div class="container text-center mt-5">
+    <h2 class="text-bg-success text-center mt-3 p-3">SNACK 2</h2>
+    <div class="container text-center">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-bg-success p-3">SNACK 2</h2>
                 <main>
                     <form action="index.php" method="GET">
                         <div class="input-group mt-4">
@@ -99,11 +99,11 @@ $paragrafi = explode(".", $paragrafo);
                     <?php
                     if (isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
                         if (strlen($name) > 3 && strpos($mail, '@') !== false && strpos($mail, '.') !== false && is_numeric($age)) { ?>
-                            <div class="text-success">
+                            <div class="text-success mt-2">
                                 Accesso riuscito
                             </div>
                         <?php } else { ?>
-                            <div class="text-danger">
+                            <div class="text-danger mt-2">
                                 Accesso negato
                             </div>
                         <?php }
@@ -113,10 +113,10 @@ $paragrafi = explode(".", $paragrafo);
         </div>
     </div>
     <!-- SNACK BONUS-->
-    <div class="container text-center mt-5">
+    <h2 class="text-bg-primary text-center mt-5 p-3">SNACK BONUS</h2>
+    <div class="container text-center">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-bg-primary p-3">SNACK BONUS</h2>
                 <main>
                     <?php
                     foreach ($paragrafi as $paragrafo) {
